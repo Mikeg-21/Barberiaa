@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- Barra de navegacion -->
+<nav class="navbar navbar-expand-md">
+  <div class="container-fluid navbar-container">
+    <button class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <img class="navbar-img" src="img/logo-removebg-preview.png" width="60" alt="Logo-Barberia">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
+      <a class="navbar-brand m-0 embed-responsive embed-responsive-16by9" href="#">
+        <img class="navbar-img img-fluid" src="img/logo-removebg-preview.png" width="168" alt="Logo-Gym">
+      </a>
+      <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3 gap-sm-2 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" aria-current="page" th:href="@{/inicio}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" aria-current="true" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" aria-current="true" th:href="@{/listar}" >Reservas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" aria-current="true" href="#contacto" >Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="container-fluid p-0">
+    <picture class="img-container">
+      <img class="img-fluid" src="img/img.webp" alt="">
+      <div class="text-on-image">
+        <h1 class="text-center text-white">TU <span>IMAGEN, </span>NUESTRO <span>COMPROMISO </span>.</h1>
+        <p class="text-center text-white"></p>
+      </div>
+    </picture>
+  </div>
+</section>
+
+<!-- Tarjetas -->
+<section id="servicios" class="container mt-4">
+  <div class="text-center mb-5">
+    <h2>Servicios</h2>
+    <div class="w-75 mx-auto mt-4">
+      <p>Nuestros servicios están diseñados para brindarte una experiencia completa de cuidado y estilo. Desde cortes clásicos hasta las últimas tendencias en barbería, nuestros expertos están comprometidos en resaltar tu personalidad y realzar tu imagen. Ofrecemos una gama de servicios que incluyen cortes de cabello a medida, afeitados precisos, tratamientos de barba y cuidado del cuero cabelludo. En cada visita, nos esforzamos por proporcionarte atención personalizada, productos de alta calidad y un ambiente acogedor para que te sientas en confianza y salgas con un look que te haga sentir seguro y auténtico.</p>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card position-relative">
+        <img src="img/corte.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay custom-overlay d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <h5 class="card-title text-light">Corte De Cabello</h5>
+          </div>
+          <div>
+            <a th:href="@{/reservar}" class="btn">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card position-relative">
+        <img src="img/barba.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay custom-overlay d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <h5 class="card-title text-light">Barba</h5>
+          </div>
+          <div>
+            <a th:href="@{/reservar}" class="btn">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card position-relative">
+        <img src="img/cejas.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay custom-overlay d-flex flex-column justify-content-center align-items-center">
+          <div>
+            <h5 class="card-title text-light">Cejas</h5>
+          </div>
+          <div>
+            <a th:href="@{/reservar}" class="btn">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <p>Dirección: Calle de la Barbería, 123</p>
+        <p>Teléfono: 123-456-789</p>
+        <p>Email: info@barberia.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Horario</h5>
+        <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+        <p>Sábado: 9:00 AM - 5:00 PM</p>
+        <p>Domingo: Cerrado</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Redes Sociales</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light">Facebook</a></li>
+          <li><a href="#" class="text-light">Instagram</a></li>
+          <li><a href="#" class="text-light">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts de Bootstrap (jQuery primero, luego Popper.js, y finalmente Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
